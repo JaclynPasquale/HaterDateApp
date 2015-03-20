@@ -189,6 +189,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularApp\Controllers\ProfileController.js" />
+    <Content Include="AngularApp\RouteConfig.js" />
+    <Content Include="AngularApp\StaticViews\Matches.html" />
+    <Content Include="AngularApp\StaticViews\ProfileForm.html" />
+    <Content Include="AngularApp\StaticViews\Quiz1.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -1000,8 +1005,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -1027,7 +1030,6 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AngularApp\" />
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
   </ItemGroup>

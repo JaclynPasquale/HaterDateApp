@@ -1,5 +1,5 @@
 ﻿angular.module("HaterDateApp", [])
-.controller("ProfileController", function ($scope, $http) {
+.controller("GetProfileController", function ($scope, $http) {
     $scope.data = [];
 
     $http.get("/api/profiles")
@@ -13,7 +13,7 @@
         })
 
 })
-.controller("NewProfileController", function ($scope, $http, $location) {
+.controller("AddProfileController", function ($scope, $http, $location) {
     $scope.newProfile = {};
 
     $scope.save = function () {
