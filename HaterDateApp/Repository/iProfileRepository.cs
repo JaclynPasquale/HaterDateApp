@@ -14,10 +14,12 @@ namespace HaterDatingApp.Repository
         void Add(Profiles E); //
         void Delete(Profiles E); //
         void Clear(); //
-        IQueryable<Profiles> GetAll(); //
+        IQueryable<Profiles> GetAllProfiles(); //
         Profiles GetById(string id); //
 
         IQueryable<Profiles> SearchFor(Expression<Func<Profiles, bool>> predicate);
 
+
+        IEnumerable<string> GetProfiles();
     }
 }

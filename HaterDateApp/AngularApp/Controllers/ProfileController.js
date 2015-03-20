@@ -21,7 +21,7 @@
             .then(function (result) {
                 //Success
                 var newProfile = result.data;
-                console.log(newAlbum);
+                console.log(newProfile);
                 $location.path("/");
             },
             function () {

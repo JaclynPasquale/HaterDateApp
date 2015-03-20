@@ -103,7 +103,7 @@ namespace HaterDatingApp.Repository
             _dbContext.SaveChanges();
         }
 
-        public IQueryable<Model.Profiles> GetAll()
+        public IQueryable<Model.Profiles> GetAllProfiles()
         {
             // First look to see if the stash is populated. If so
             // then return that stash otherwise do what's below.
