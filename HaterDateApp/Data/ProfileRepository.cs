@@ -103,6 +103,14 @@ namespace HaterDateApp.Data
             _dbContext.SaveChanges();
         }
 
+        public IEnumerable<Profiles> GetProfilebyUserId(string userId)
+        {
+            var ProfilebyId = from p in _dbContext.Profile
+                             where p.ApplicationUserId == userId
+                             select p;
+            return ProfilebyId.ToList();
+        }
+
         public IQueryable<Data.Profiles> GetProfiles()
         {
             // First look to see if the stash is populated. If so

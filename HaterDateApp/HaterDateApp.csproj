@@ -200,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\Controllers\ProfileController.js" />
+    <Content Include="AngularApp\ProfileFactory.js" />
     <Content Include="AngularApp\RouteConfig.js" />
     <Content Include="AngularApp\StaticViews\Landing.html" />
     <Content Include="AngularApp\StaticViews\Matches.html" />

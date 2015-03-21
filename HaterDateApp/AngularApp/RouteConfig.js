@@ -1,25 +1,25 @@
-﻿angular.module("HaterDateApp", ["ngRoute"])
+﻿var app = angular.module("HaterDateApp", ["ngRoute", "ngResource"])
 
-.config(function ($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            controller: "ProfileController",
+            controller: "profileController",
             templateUrl: "/AngularApp/StaticViews/Landing.html"
         })
         .when("/Profile", {
-            controller: "AddProfileController",
+            controller: "profileController",
             templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
         })
         .when("/Profile/:id", {
-            controller: "ProfileController",
+            controller: "profileController",
             templateUrl: "/AngularApp/StaticViews/SOMETHING.html"
         })
         .when("/Quiz", {
-            controller: "ProfileController",
+            controller: "profileController",
             templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
         .when("/Match", {
-            controller: "AddProfileController",
+            controller: "profileController",
             templateUrl: "/AngularApp/StaticViews/Matches.html"
         })
         .otherwise({ redirectTo: "/" });
