@@ -178,6 +178,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Data\HaterDateContext.cs" />
+    <Compile Include="Migrations\201503211758378_initial setup.cs" />
+    <Compile Include="Migrations\201503211758378_initial setup.Designer.cs">
+      <DependentUpon>201503211758378_initial setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Data\Dislikes.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -1041,6 +1046,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503211758378_initial setup.resx">
+      <DependentUpon>201503211758378_initial setup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -87,22 +87,25 @@
         <div class="form-group">
             <label class="col-sm-2 control-label" for="gender">Gender</label>
             <input id="male" class="radio-inline" type="radio" name="gender" value="F" />
-            <label for="male">Male</label>
+            <label id="male" for="male">Male</label>
             <input id="female" class="radio-inline" type="radio" name="gender" value="M" />
-            <label for="female">Female</label>
+            <label id="female" for="female">Female</label>
         </div>
         <div class="form-group" >
             <label class="col-sm-2 control-label" for="interestedin">Interested in</label>
             <input id="men" class="radio-inline radio" type="radio" name="interestedin" value="Men" />
-            <label for="men">Men</label>
+            <label id="men" for="men">Men</label>
             <input id="women" class="radio-inline radio" type="radio" name="interestedin" value="Women" />
-            <label for="women">Women</label>
+            <label id="women" for="women">Women</label>
         </div>
         <div class="form-group">
             <label  class="col-sm-2 control-label" for="imgurl">Image URL</label>
             <input class="col-sm-2" type="url" />
         </div>
-
-        <input type="submit" class="btn" ng-disabled="ProfileForm.$invalid" ng-click="save()" />
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-success col-sm-2" ng-disabled="ProfileForm.$invalid" ng-click="save()" />
+            </div>
+        </div>
   
 </form>

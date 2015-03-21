@@ -36,13 +36,13 @@ namespace HaterDatingAppTests
         public void TestAddToDatabase()
         {
             Assert.AreEqual(0, repo.GetCount());
-            repo.Add(new Profiles("Jane", "Jane", "Doe", "New York", "New York", "janedoe@gmail.com", 25, 'F', 'M', "https://s-media-cache-ak0.pinimg.com/originals/cb/80/cc/cb80cc8aed218910fc3e42163f891798.jpg"));
+            repo.Add(new Profiles("Jane", "Jane", "Doe", "New York", "New York", "janedoe@gmail.com", 25, 'F', 'M', "https://s-media-cache-ak0.pinimg.com/originals/cb/80/cc/cb80cc8aed218910fc3e42163f891798.jpg", "about me"));
             Assert.AreEqual(1, repo.GetCount());
         }
         [TestMethod]
         public void TestAllMethods()
         {
-            repo.Add(new Profiles("Jim", "Jim", "Jones", "Los Angeles", "California", "joejones@gmail.com", 28, 'M', 'F', "https://s-media-cache-ak0.pinimg.com/originals/cb/80/cc/cb80cc8aed218910fc3e42163f891798.jpg"));
+            repo.Add(new Profiles("Jim", "Jim", "Jones", "Los Angeles", "California", "joejones@gmail.com", 28, 'M', 'F', "https://s-media-cache-ak0.pinimg.com/originals/cb/80/cc/cb80cc8aed218910fc3e42163f891798.jpg", "about me"));
             Assert.AreEqual(1, repo.GetCount());
             repo.Clear();
 

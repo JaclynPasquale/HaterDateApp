@@ -18,26 +18,25 @@ namespace HaterDateApp.Data
 
         public string ApplicationUserId { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
+        //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
         [Required]
         public string FirstName { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
+        //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
         [Required]
-        private string LastName { get; set; }
+        public string LastName { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
+        //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
         [Required]
         public string City { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
+        //[RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
         [Required]
         public string State { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$"), StringLength(30)]
         [Required]
         [DataType(DataType.EmailAddress)]
-        private string Email { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [Range(1, 150)]
@@ -54,11 +53,13 @@ namespace HaterDateApp.Data
         [DataType(DataType.Url)]
         public string PictureURL { get; set; }
 
+        public string AboutBlurb { get; set; }
+
         public ICollection<Dislikes> dislikes { get; set; }
 
 
 
-        public Profiles(string UserName, string FirstName, string LastName, string City, string State, string Email, int Age, char Gender, char PrefGender, string PicURL)
+        public Profiles(string UserName, string FirstName, string LastName, string City, string State, string Email, int Age, char Gender, char PrefGender, string PicURL, string AboutBlurb)
         {
             this.ApplicationUserId = ApplicationUserId;
             this.FirstName = FirstName;
@@ -70,6 +71,7 @@ namespace HaterDateApp.Data
             this.Gender = Gender;
             this.PreferredGender = PrefGender;
             this.PictureURL = PicURL;
+            this.AboutBlurb = AboutBlurb;
         }
     }
 

@@ -15,7 +15,7 @@
             templateUrl: "/AngularApp/StaticViews/SOMETHING.html"
         })
         .when("/Quiz", {
-            controller: "AddProfileController",
+            controller: "ProfileController",
             templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
         .when("/Match", {
