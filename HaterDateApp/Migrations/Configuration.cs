@@ -94,16 +94,16 @@ namespace HaterDateApp.Migrations
                },
                new Profiles
                {
-                   ApplicationUserId = "Sonda",
-                   FirstName = "Sonda",
-                   LastName = "Sengupta",
-                   Email = "sonda@gmail.com",
+                   ApplicationUserId = "Jayquellin",
+                   FirstName = "Jackie",
+                   LastName = "Pquat",
+                   Email = "jayquellin@gmail.com",
                    City = "Nashville",
                    State = "Tennessee",
                    Gender = 'F',
                    Age = 26,
                    PreferredGender = 'M',
-                   PictureURL = "http://coins4.cat/wp-content/uploads/2014/03/FB-header.jpg",
+                   PictureURL = "http://s3.amazonaws.com/assets.prod.vetstreet.com/06/36bbf0e6f211e19ff5005056ad4734/file/AP-BAKLFT_Sphynx_Cat.jpg",
                    AboutBlurb = "about me",
 
                }
@@ -111,6 +111,6 @@ namespace HaterDateApp.Migrations
            );
         }
 
-        }
     }
+}
 

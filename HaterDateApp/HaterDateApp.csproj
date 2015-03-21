@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201503211758378_initial setup.Designer.cs">
       <DependentUpon>201503211758378_initial setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503211821002_add seed.cs" />
+    <Compile Include="Migrations\201503211821002_add seed.Designer.cs">
+      <DependentUpon>201503211821002_add seed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Data\Dislikes.cs" />
@@ -1050,6 +1054,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503211758378_initial setup.resx">
       <DependentUpon>201503211758378_initial setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503211821002_add seed.resx">
+      <DependentUpon>201503211821002_add seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
