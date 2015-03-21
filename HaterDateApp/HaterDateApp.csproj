@@ -177,21 +177,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Repository\HaterDateContext.cs" />
+    <Compile Include="Data\HaterDateContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Dislikes.cs" />
+    <Compile Include="Data\Dislikes.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Profiles.cs" />
-    <Compile Include="Models\Questions.cs" />
+    <Compile Include="Data\Profiles.cs" />
+    <Compile Include="Data\Questions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\iProfileRepository.cs" />
-    <Compile Include="Repository\ProfileRepository.cs" />
+    <Compile Include="Data\iProfileRepository.cs" />
+    <Compile Include="Data\ProfileRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\Controllers\ProfileController.js" />
     <Content Include="AngularApp\RouteConfig.js" />
+    <Content Include="AngularApp\StaticViews\Landing.html" />
     <Content Include="AngularApp\StaticViews\Matches.html" />
     <Content Include="AngularApp\StaticViews\ProfileForm.html" />
     <Content Include="AngularApp\StaticViews\Quiz1.html" />

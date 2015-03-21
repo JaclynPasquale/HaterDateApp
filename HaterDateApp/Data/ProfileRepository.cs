@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using HaterDateApp;
 using System.Data.Entity;
-using HaterDateApp.Model;
+using HaterDateApp.Data;
 
 
 
 
-namespace HaterDateApp.Repository
+namespace HaterDateApp.Data
 {
     public class ProfileRepository : iProfileRepository
     {
@@ -34,14 +34,14 @@ namespace HaterDateApp.Repository
         //    return dbContextQ;
         //}
 
-        public DbSet<Model.Profiles> GetDbSet()
+        public DbSet<Data.Profiles> GetDbSet()
         {
             return _dbContext.Profile;
         }
 
         public int GetCount()
         {
-            return _dbContext.Profile.Count<Model.Profiles>();
+            return _dbContext.Profile.Count<Data.Profiles>();
         }
 
         public void Save()
@@ -49,12 +49,12 @@ namespace HaterDateApp.Repository
             _dbContext.SaveChanges();
         }
 
-        public void Delete(Model.Profiles P)
+        public void Delete(Data.Profiles P)
         {
             throw new NotImplementedException();
         }
 
-        public void Add(Model.Profiles P)
+        public void Add(Data.Profiles P)
         {
             /* Solution 1:
              * Find if the event is in the DB;
@@ -88,12 +88,12 @@ namespace HaterDateApp.Repository
             _dbContext.SaveChanges();
         }
 
-        public Model.Profiles GetById(string id)
+        public Data.Profiles GetById(string id)
         {
             var query = from Profile in _dbContext.Profile
                         where Profile.ApplicationUserId == id
                         select Profile;
-            return query.First<Model.Profiles>();
+            return query.First<Data.Profiles>();
 
         }
         public void Clear()
@@ -103,7 +103,7 @@ namespace HaterDateApp.Repository
             _dbContext.SaveChanges();
         }
 
-        public IQueryable<Model.Profiles> GetProfiles()
+        public IQueryable<Data.Profiles> GetProfiles()
         {
             // First look to see if the stash is populated. If so
             // then return that stash otherwise do what's below.
@@ -112,7 +112,7 @@ namespace HaterDateApp.Repository
             return _dbContext.Profile;
         }
 
-        public IQueryable<Model.Profiles> SearchFor(System.Linq.Expressions.Expression<Func<Model.Profiles, bool>> predicate)
+        public IQueryable<Data.Profiles> SearchFor(System.Linq.Expressions.Expression<Func<Data.Profiles, bool>> predicate)
         {
             throw new NotImplementedException();
         }

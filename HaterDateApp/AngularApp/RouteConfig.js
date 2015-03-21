@@ -4,7 +4,7 @@
     $routeProvider
         .when("/", {
             controller: "ProfileController",
-            templateUrl: "/templates/homeView.html"
+            templateUrl: "/AngularApp/StaticViews/Landing.html"
         })
         .when("/Profile", {
             controller: "AddProfileController",
@@ -16,11 +16,11 @@
         })
         .when("/Quiz", {
             controller: "AddProfileController",
-            templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
+            templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
         .when("/Match", {
             controller: "AddProfileController",
-            templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
+            templateUrl: "/AngularApp/StaticViews/Matches.html"
         })
         .otherwise({ redirectTo: "/" });
 })

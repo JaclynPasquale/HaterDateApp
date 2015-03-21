@@ -1,4 +1,4 @@
-﻿angular.module("HaterDateApp", [])
+﻿angular.module("HaterDateApp", ["ngRoute"])
 .controller("GetProfileController", function ($scope, $http) {
     $scope.data = [];
 

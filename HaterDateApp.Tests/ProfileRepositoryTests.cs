@@ -5,8 +5,7 @@ using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HaterDateApp;
-using HaterDateApp.Model;
-using HaterDateApp.Repository;
+using HaterDateApp.Data;
 using System.Data.Entity;
 
 namespace HaterDatingAppTests
