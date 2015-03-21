@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace HaterDatingApp.Model
+namespace HaterDateApp.Model
 {
     public class Profiles
     {

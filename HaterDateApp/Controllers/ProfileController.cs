@@ -1,4 +1,4 @@
-﻿using HaterDatingApp.Repository;
+﻿using HaterDateApp.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +10,18 @@ namespace HaterDateApp.Controllers
 {
     public class ProfileController : ApiController
     {
-        private iProfileRepository _repo;
+        ProfileRepository _repo = new ProfileRepository();
 
-        public ProfileController(iProfileRepository repo)
-        {
-            _repo = repo;
-        }
-        // GET: api/Profile
-        [Route("api/Profile")]
-        public IEnumerable<string> Get()
-        {
-            return _repo.GetAllProfiles()
+        
+
+        //// GET: api/Profile
+        //[Route("api/Profile")]
+        //public IEnumerable<string> Get()
+        //{
+        //    return _repo.GetProfiles();
                 
                 
-        }
+        //}
 
         // GET: api/Profile/5
         public string Get(int id)

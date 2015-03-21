@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HaterDatingApp;
-using System.Data.Entity;
-using HaterDatingApp.Model;
 using HaterDateApp;
+using System.Data.Entity;
+using HaterDateApp.Model;
 
 
 
-namespace HaterDatingApp.Repository
+
+namespace HaterDateApp.Repository
 {
     public class ProfileRepository : iProfileRepository
     {
@@ -98,12 +98,12 @@ namespace HaterDatingApp.Repository
         }
         public void Clear()
         {
-            var a = this.GetAll();
+            var a = this.GetProfiles();
             _dbContext.Profile.RemoveRange(a);
             _dbContext.SaveChanges();
         }
 
-        public IQueryable<Model.Profiles> GetAllProfiles()
+        public IQueryable<Model.Profiles> GetProfiles()
         {
             // First look to see if the stash is populated. If so
             // then return that stash otherwise do what's below.

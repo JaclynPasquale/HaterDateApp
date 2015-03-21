@@ -1,4 +1,4 @@
-﻿using HaterDatingApp.Model;
+﻿using HaterDateApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
