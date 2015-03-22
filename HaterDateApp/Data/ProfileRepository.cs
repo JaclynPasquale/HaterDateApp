@@ -54,7 +54,7 @@ namespace HaterDateApp.Data
             throw new NotImplementedException();
         }
 
-        public void Add(Data.Profiles P)
+        public void Add(Data.Profiles profile)
         {
             /* Solution 1:
              * Find if the event is in the DB;
@@ -84,7 +84,7 @@ namespace HaterDateApp.Data
              * Thinking forward, we want the UI window handling the Event addition to tell the user they
              * can't add duplicates
              * */
-            _dbContext.Profile.Add(P);
+            _dbContext.Profile.Add(profile);
             _dbContext.SaveChanges();
         }
 

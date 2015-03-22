@@ -61,7 +61,7 @@ namespace HaterDateApp.Data
 
         public Profiles(string UserName, string FirstName, string LastName, string City, string State, string Email, int Age, char Gender, char PrefGender, string PicURL, string AboutBlurb)
         {
-            this.ApplicationUserId = ApplicationUserId;
+            this.ApplicationUserId = UserName;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.City = City;

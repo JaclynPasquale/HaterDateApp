@@ -47,7 +47,7 @@ namespace HaterDateApp.Controllers
         [Route("api/Profile")]
         public HttpResponseMessage Post(Profiles profile)
         {
-            profile.ApplicationUserId = User.Identity.GetUserId();
+            //profile.ApplicationUserId = User.Identity.GetUserId();
             _repo.Add(profile);
             return Request.CreateResponse(HttpStatusCode.Created, profile);
         }

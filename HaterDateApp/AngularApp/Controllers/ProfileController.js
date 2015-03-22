@@ -31,9 +31,9 @@
 //    }
     app.controller('profileController', function ($scope, profileFactory, $location) {
         $scope.profile = profileFactory.get();
-
-        $scope.save = function (profile) {
-            profileFactory.save(profile);
+        $scope.newProfile = {};
+        $scope.save = function () {
+            profileFactory.save($scope.newProfile);
             $location.url("/Quiz");
         }
     })
