@@ -16,21 +16,9 @@ namespace HaterDateApp.Controllers
 
 
 
-        // GET: api/Profile
-        //[Route("api/Profile")]
-        //public IEnumerable<string> Get()
-        //{
-        //    //string userId = User.Identity.GetUserId();
-        //    //if (userId != null)
-        //    //{
-        //    //    return .GetPlacesbyUserId(userId);
-        //    //}
-        //    //return _db.GetAllPlaces();
+       
 
-
-        //}
-
-        // GET: api/Profile/5
+        // GET: api/Profile/
 
         [Route("api/Profile")]
         public IEnumerable<Profiles> Get()
@@ -42,6 +30,12 @@ namespace HaterDateApp.Controllers
             }
             return _repo.GetProfiles();
         }
+
+        [Route("api/Profil")]
+        public IEnumerable<Profiles> Get( string state)
+        {
+            return _repo.GetProfileByState(state);
+        }
         
 
         [Route("api/Profile")]
@@ -51,12 +45,22 @@ namespace HaterDateApp.Controllers
             _repo.Add(profile);
             return Request.CreateResponse(HttpStatusCode.Created, profile);
         }
+
+        [Route("api/Dislike")]
+        public HttpResponseMessage Post(Dislikes dislike)
+        {
+            dislike.ProfileId = User.Identity.GetUserName();
+            _repo.AddDislike(dislike);
+            return Request.CreateResponse(HttpStatusCode.Created, dislike);
+        }
+
             
 
 
         // PUT: api/Profile/5
         public void Put(int id, [FromBody]string value)
         {
+
         }
 
         // DELETE: api/Profile/5

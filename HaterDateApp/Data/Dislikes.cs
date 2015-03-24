@@ -14,9 +14,9 @@ namespace HaterDateApp.Data
 
         }
         public int Id { get; set; }
-        public int ProfileId { get; set; }
+        public string ProfileId { get; set; }
         public int QuestionId { get; set; }
-        public int QuestionValue { get; set; }
+        public string QuestionValue { get; set; }
 
         public virtual Profiles profile { get; set; }
     }

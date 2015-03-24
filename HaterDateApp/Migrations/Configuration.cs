@@ -15,100 +15,118 @@ namespace HaterDateApp.Migrations
 
         protected override void Seed(HaterDateApp.HaterDateContext context)
         {
-            context.Profile.AddOrUpdate(i => i.ApplicationUserId,
-            
-                new Profiles
+            context.Question.AddOrUpdate(i => i.QuestionName,
+
+                new Questions
                 {
-                    ApplicationUserId = "JaneD0e",
-                    FirstName = "Jane",
-                    LastName = "Doe",
-                    Email = "jane@gmail.com",
-                    City = "New York City",
-                    State = "New York",
-                    Gender = "F",
-                    Age = 27,
-                    PreferredGender = "M",
-                    PictureURL = "http://animalia-life.com/data_images/cat/cat1.jpg",
-                    AboutBlurb = "about me",
-                    
-               },
-               new Profiles
-               {
-                   ApplicationUserId = "JonD0e",
-                   FirstName = "Jon",
-                   LastName = "Doe",
-                   Email = "jon@gmail.com",
-                   City = "San Francisco",
-                   State = "California",
-                   Gender = "M",
-                   Age = 27,
-                   PreferredGender = "F",
-                   PictureURL = "http://www.cats.org.uk/uploads/images/pages/photo_latest14.jpg",
-                   AboutBlurb = "about me",
-
-               },
-               new Profiles
-               {
-                   ApplicationUserId = "Mittens",
-                   FirstName = "Leon",
-                   LastName = "Peck",
-                   Email = "leon@gmail.com",
-                   City = "Nashville",
-                   State = "Tennessee",
-                   Gender = "M",
-                   Age = 29,
-                   PreferredGender = "F",
-                   PictureURL = "http://www.cats.org.uk/uploads/images/pages/photo_latest14.jpg",
-                   AboutBlurb = "about me",
-
-               },
-               new Profiles
-               {
-                   ApplicationUserId = "BlaisingGrattles",
-                   FirstName = "Blaise",
-                   LastName = "Grattles",
-                   Email = "blaise@gmail.com",
-                   City = "Nashville",
-                   State = "Tennessee",
-                   Gender = "M",
-                   Age = 26,
-                   PreferredGender = "F",
-                   PictureURL = "http://breadedcat.com/wp-content/uploads/2012/02/cat-breading-tutorial-004.jpg",
-                   AboutBlurb = "about me",
-
-               },
-               new Profiles
-               {
-                   ApplicationUserId = "Sonda",
-                   FirstName = "Sonda",
-                   LastName = "Sengupta",
-                   Email = "sonda@gmail.com",
-                   City = "Nashville",
-                   State = "Tennessee",
-                   Gender = "F",
-                   Age = 26,
-                   PreferredGender = "M",
-                   PictureURL = "http://coins4.cat/wp-content/uploads/2014/03/FB-header.jpg",
-                   AboutBlurb = "about me",
-
-               },
-               new Profiles
-               {
-                   ApplicationUserId = "Jayquellin",
-                   FirstName = "Jackie",
-                   LastName = "Pquat",
-                   Email = "jayquellin@gmail.com",
-                   City = "Nashville",
-                   State = "Tennessee",
-                   Gender = "F",
-                   Age = 26,
-                   PreferredGender = "M",
-                   PictureURL = "http://s3.amazonaws.com/assets.prod.vetstreet.com/06/36bbf0e6f211e19ff5005056ad4734/file/AP-BAKLFT_Sphynx_Cat.jpg",
-                   AboutBlurb = "about me",
-
-               }
-
-           );
+                    QuestionName = "Children"
+                },
+                new Questions
+                {
+                    QuestionName = "Snakes"
+                },
+                new Questions
+                {
+                    QuestionName = "The word \"Moist\""
+                },
+                new Questions
+                {
+                    QuestionName = "Handlebar Mustaches"
+                },
+                new Questions
+                {
+                    QuestionName = "People that say \"LOL\" unironically"
+                },
+                new Questions
+                {
+                    QuestionName = "The great outdoors"
+                },
+                new Questions
+                {
+                    QuestionName = "Kayne West"
+                },
+                new Questions
+                {
+                    QuestionName = "Soup that's too hot"
+                },
+                new Questions
+                {
+                    QuestionName = "Motorcycles"
+                },
+                new Questions
+                {
+                    QuestionName = "Non-crispy bacon"
+                },
+                new Questions
+                {
+                    QuestionName = "People that buy one-ply toilet paper"
+                },
+                new Questions
+                {
+                    QuestionName = "E-cigs"
+                },
+                new Questions
+                {
+                    QuestionName = "Apple products"
+                },
+                new Questions
+                {
+                    QuestionName = "Djs on the radio"
+                },
+                new Questions
+                {
+                    QuestionName = "Cats"
+                },
+                new Questions
+                {
+                    QuestionName = "Tailgating"
+                },
+                new Questions
+                {
+                    QuestionName = "The Police"
+                },
+                new Questions
+                {
+                    QuestionName = "Nickleback"
+                },
+                new Questions
+                {
+                    QuestionName = "Small Dogs"
+                },
+                new Questions
+                {
+                    QuestionName = "Your neighbors cooking indian food"
+                },
+                new Questions
+                {
+                    QuestionName = "Cryptic Facebook status'"
+                },
+                new Questions
+                {
+                    QuestionName = "Spiders"
+                },
+                new Questions
+                {
+                    QuestionName = "Biking"
+                },
+                
+                new Questions
+                {
+                    QuestionName = "Crappy horror movies"
+                },
+                 new Questions
+                {
+                    QuestionName = "NASCAR"
+                },
+                new Questions
+                {
+                    QuestionName = "The tv show \"Friends\""
+                },
+                 new Questions
+                {
+                    QuestionName = "Walmart"
+                }
+             );
         }
 
     }

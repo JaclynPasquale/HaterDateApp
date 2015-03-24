@@ -53,6 +53,11 @@ namespace HaterDateApp.Data
         {
             throw new NotImplementedException();
         }
+        public void AddDislike(Data.Dislikes dislike)
+        {
+            _dbContext.Dislike.Add(dislike);
+            _dbContext.SaveChanges();
+        }
 
         public void Add(Data.Profiles profile)
         {
@@ -118,6 +123,16 @@ namespace HaterDateApp.Data
             //var qu = from Profiles in _dbContext.Profiles select Profiles;
             //return qu.ToList<Model.Profile>();
             return _dbContext.Profile;
+        }
+
+        public IQueryable<Profiles> GetProfileByState(string state)
+        {
+            var profile = from a in _dbContext.Profile
+                         select a;
+            
+            profile = profile.Where(s => s.State.Contains(state));
+
+           return profile;
         }
 
         public IQueryable<Data.Profiles> SearchFor(System.Linq.Expressions.Expression<Func<Data.Profiles, bool>> predicate)
