@@ -42,13 +42,13 @@ namespace HaterDateApp.Data
         [Range(1, 150)]
         public int Age { get; set; }
 
-        [RegularExpression(@"[MF]")]
+        //[RegularExpression(@"[MF]")]
         [Required]
-        public char Gender { get; set; }
+        public string Gender { get; set; }
 
-        [RegularExpression(@"[MF]")]
+        //[RegularExpression(@"[MF]")]
         [Required]
-        public char PreferredGender { get; set; }
+        public string PreferredGender { get; set; }
 
         [DataType(DataType.Url)]
         public string PictureURL { get; set; }
@@ -59,7 +59,7 @@ namespace HaterDateApp.Data
 
 
 
-        public Profiles(string UserName, string FirstName, string LastName, string City, string State, string Email, int Age, char Gender, char PrefGender, string PicURL, string AboutBlurb)
+        public Profiles(string UserName, string FirstName, string LastName, string City, string State, string Email, int Age, string Gender, string PrefGender, string PicURL, string AboutBlurb)
         {
             this.ApplicationUserId = UserName;
             this.FirstName = FirstName;

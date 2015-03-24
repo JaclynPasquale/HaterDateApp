@@ -4,7 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - HaterDate</title>
-    <link href="~/Content/ng-slider.min.css" rel="stylesheet" />
+    <link href="~/Content/component.css" rel="stylesheet" />
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/demo.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
+    <link href="~/Content/themes/base/slider.css"  rel="stylesheet"/>
+    <link href="~/Content/angular-slider.min.css" rel="stylesheet" />
+    
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -48,6 +55,7 @@
     <div class="container body-content">
       @RenderBody()
     </div>
+    <br />
     <footer>
     <p>&copy; @DateTime.Now.Year - HaterDate</p>
     </footer>
@@ -57,15 +65,20 @@
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.js"></script>
+    <script src="~/Scripts/angular-slider.min.js"></script>
+    <script src="~/Scripts/svgcheckbx.js"></script>
     
-    <script src="~/Scripts/ng-slider.min.js"></script>
-
+  
     <script src="~/AngularApp/RouteConfig.js"></script>
     <script src="~/AngularApp/ProfileFactory.js"></script>
     <script src="~/AngularApp/Controllers/ProfileController.js"></script>
+    <script src="~/AngularApp/JS/modernizr.custom.js"></script>
+    <script src="~/AngularApp/JS/svgcheckbx.js"></script>
 
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap-slider.js"></script>
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>

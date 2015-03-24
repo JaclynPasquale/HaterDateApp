@@ -8,4 +8,4 @@
             return $resource('/api/profile').save(profile);
         }
     }
-});
+}); 
