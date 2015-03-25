@@ -12,8 +12,8 @@
             return $resource('/api/profile').save(profile);
         },
 
-        saveDislike: function (dislike, profileId) {
-            return $resource('/api/questions').saveDislike(dislike);
+        saveDislike: function (question) {
+            return $resource('/api/dislike').save(question);
         },
 
 

@@ -1,25 +1,24 @@
 ﻿<section>
     <form class="ac-custom ac-radio ac-fill quizform" autocomplete="off">
         <h1>Do you Hate these things?</h1>
-        <!--<div class="col-lg-7">
-            <ul ng-repeat="question in questions">
-                <li >
-                    <h2>{{question.questionName}}</h2>
-                </li>
-            </ul>
+        <div class="col-lg-7">
             <ul>
+                <li >
+                    <h2>{{questions[q].questionName}}</h2>
+                </li>
                    <li>
                        <input ng-change="saveDislike(dislike)" name="name" value="T" type="radio" ng-model="Dislike.QuestionValue">
                     <label for="r1">True</label>
                 </li>
                 <li>
-                    <input ng-change="saveDislike(dislike)" ng-model="Dislike.QuestionValue" value="F" name="name2" type="radio">
+                    <input ng-change="saveDislike(dislike)" ng-model="Dislike.QuestionValue" value="F" name="name" type="radio">
                     <label for="r2">False</label>
                 </li>
 
             </ul>
+            <div class="btn btn-success" ng-click="nextQuestion()">Next Question</div>
         </div>
-        <div class="col-lg-7">
+        <!--<div class="col-lg-7">
             <h3>Snakes</h3>
             <ul>
                 <li>
@@ -59,24 +58,24 @@
                 </li>
 
             </ul>
-        </div>-->
-        <div class="col-lg-8">
+        </div>
+        <div class="col-lg-8">-->
 
-            <h3>People that say "LOL" unironically</h3>
+            <!--<h3>People that say "LOL" unironically</h3>
             <ul>
                 <li>
                     <input ng-model="Dislikes.QuestionValue" id="r9" value="T" name="r9" type="radio">
                     <label for="r">True</label>
                 </li>
                 <li>
-                    <input ng-model="Dislikes.QuestionValue" id="r10" value="F" name="r10" type="radio">
+                    <input ng-model="Dislikes.QuestionValue" id="r9" value="F" name="r9" type="radio">
                     <label for="r10">False</label>
                 </li>
             </ul>
         </div>
 
         <input type="submit" class="btn btn-success" ng-click="saveDislike(dislike)" />
-        <a href="/ShowProfile" class="btn btn-info">Done</a>
+        <a href="/ShowProfile" class="btn btn-info">Done</a>-->
 </form>
 </section>
 

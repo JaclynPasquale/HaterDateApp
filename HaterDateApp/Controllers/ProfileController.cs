@@ -56,6 +56,7 @@ namespace HaterDateApp.Controllers
 
 
         [Route("api/dislike")]
+        [HttpPost]
         public HttpResponseMessage Post(Dislikes dislike)
         {
             dislike.ProfileId = User.Identity.GetUserName();
@@ -67,7 +68,7 @@ namespace HaterDateApp.Controllers
         public IEnumerable<Questions> GetQuestions()
         {
             return _repo.GetQuestions()
-                .Take(20)
+                
                 .ToList();
                
                     

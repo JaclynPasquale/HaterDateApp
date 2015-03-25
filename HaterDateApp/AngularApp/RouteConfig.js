@@ -14,7 +14,7 @@ app.config(function ($routeProvider) {
             controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/ShowProfile.html"
         })
-        .when("/Quiz", {
+        .when("/Quiz/:id", {
             controller: "questionCtrl",
             templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
