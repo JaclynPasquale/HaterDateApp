@@ -3,23 +3,23 @@
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            controller: "profileController",
+            controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/Landing.html"
         })
         .when("/Profile", {
-            controller: "profileController",
+            controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
         })
         .when("/Profile/:id", {
-            controller: "profileController",
-            templateUrl: "/AngularApp/StaticViews/SOMETHING.html"
+            controller: "profileCtrl",
+            templateUrl: "/AngularApp/StaticViews/ShowProfile.html"
         })
         .when("/Quiz", {
-            controller: "profileController",
+            controller: "questionCtrl",
             templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
         .when("/Match", {
-            controller: "profileController",
+            controller: "matchCtrl",
             templateUrl: "/AngularApp/StaticViews/Matches.html"
         })
         .otherwise({ redirectTo: "/" });

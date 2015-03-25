@@ -14,12 +14,7 @@ namespace HaterDateApp.Controllers
     {
         ProfileRepository _repo = new ProfileRepository();
 
-
-
-       
-
         // GET: api/Profile/
-
         [Route("api/Profile")]
         public IEnumerable<Profiles> Get()
         {
@@ -31,14 +26,27 @@ namespace HaterDateApp.Controllers
             return _repo.GetProfiles();
         }
 
-        [Route("api/Profil")]
-        public IEnumerable<Profiles> Get( string state)
+        [Route("api/Profile/{id}")]
+        public IEnumerable<Profiles> Get(int id)
+        {
+            var profile = _repo.GetProfiles();
+
+            if (id != 0)
+            {
+                profile = profile.Where(i => i.Id == id);
+            }
+
+            return profile;
+        }
+
+        [Route("api/Profile")]
+        public IEnumerable<Profiles> Get(string state)
         {
             return _repo.GetProfileByState(state);
         }
         
 
-        [Route("api/Profile")]
+        [Route("api/profile")]
         public HttpResponseMessage Post(Profiles profile)
         {
             profile.ApplicationUserId = User.Identity.GetUserId();
@@ -46,7 +54,8 @@ namespace HaterDateApp.Controllers
             return Request.CreateResponse(HttpStatusCode.Created, profile);
         }
 
-        [Route("api/Dislike")]
+
+        [Route("api/dislike")]
         public HttpResponseMessage Post(Dislikes dislike)
         {
             dislike.ProfileId = User.Identity.GetUserName();
@@ -54,9 +63,16 @@ namespace HaterDateApp.Controllers
             return Request.CreateResponse(HttpStatusCode.Created, dislike);
         }
 
-            
-
-
+        [Route("api/questions")]
+        public IEnumerable<Questions> GetQuestions()
+        {
+            return _repo.GetQuestions()
+                .Take(20)
+                .ToList();
+               
+                    
+        }
+       
         // PUT: api/Profile/5
         public void Put(int id, [FromBody]string value)
         {

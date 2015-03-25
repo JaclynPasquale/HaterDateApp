@@ -125,6 +125,10 @@ namespace HaterDateApp.Migrations
                  new Questions
                 {
                     QuestionName = "Walmart"
+                },
+                new Questions
+                {
+                    QuestionName = "People that bring their desktop computer to a coffee shop"
                 }
              );
         }

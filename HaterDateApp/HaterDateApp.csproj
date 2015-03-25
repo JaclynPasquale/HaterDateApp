@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201503231545397_changed char to string.Designer.cs">
       <DependentUpon>201503231545397_changed char to string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503242156069_userid to string.cs" />
+    <Compile Include="Migrations\201503242156069_userid to string.Designer.cs">
+      <DependentUpon>201503242156069_userid to string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Data\Dislikes.cs" />
@@ -207,7 +211,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularApp\Controllers\ProfileController.js" />
+    <Content Include="AngularApp\Controllers\AppController.js" />
     <Content Include="AngularApp\JS\animatedSVG.js" />
     <Content Include="AngularApp\JS\modernizr.custom.js" />
     <Content Include="AngularApp\JS\svgcheckbx.js" />
@@ -217,6 +221,7 @@
     <Content Include="AngularApp\StaticViews\Matches.html" />
     <Content Include="AngularApp\StaticViews\ProfileForm.html" />
     <Content Include="AngularApp\StaticViews\Quiz1.html" />
+    <Content Include="AngularApp\StaticViews\ShowProfile.html" />
     <Content Include="Content\angular-slider.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -1117,6 +1122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503231545397_changed char to string.resx">
       <DependentUpon>201503231545397_changed char to string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503242156069_userid to string.resx">
+      <DependentUpon>201503242156069_userid to string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

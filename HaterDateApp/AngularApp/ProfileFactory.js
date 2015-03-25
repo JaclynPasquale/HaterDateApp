@@ -4,12 +4,16 @@
             return $resource('/api/profile').query();
         },
 
+        getQuestions: function () {
+            return $resource('/api/questions').query();
+        },
+
         save: function (profile) {
             return $resource('/api/profile').save(profile);
         },
 
-        saveDislike: function (dislike) {
-            return $resource('/api/quiz').save(dislike);
+        saveDislike: function (dislike, profileId) {
+            return $resource('/api/questions').saveDislike(dislike);
         },
 
 
