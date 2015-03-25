@@ -73,7 +73,10 @@ namespace HaterDateApp.Data
             this.PictureURL = PicURL;
             this.AboutBlurb = AboutBlurb;
         }
-    }
+    
+
+      
+}
 
 
 }

@@ -19,11 +19,8 @@ app.controller('questionCtrl', function($scope, profileFactory, $location, $rout
         $location.url("/Matches")
     }
 
-   
     $scope.q = $routeParams.id;
     profileFactory.getQuestions()
-
-    
 
     $scope.nextQuestion = function()
     {
@@ -31,20 +28,12 @@ app.controller('questionCtrl', function($scope, profileFactory, $location, $rout
         profileFactory.saveDislike(question);
         $location.path("/Quiz/" + ++$scope.q );
     }
-      
-    
-
-
 })
 
-//.controller('ShowCtrl', function ($scope, $routeParams, $location, profileFactory) {
-//    var vm = this;
-//    var id = $routeParams.id;
-//    $http.get('https://library-app-angular.firebaseio.com/' + id + '.json')
-//      .success(function (data) {
-//          vm.question = data;
-//      })
-//      .error(function (err) {
-//          console.log(err);
-//      })
+//app.controller('MatchCtrl', function ($scope, $location, profileFactory) {
+//    $scope.dislike = profileFactory.get();
+//    $scope.matches = {};
+
+
+    
 //})

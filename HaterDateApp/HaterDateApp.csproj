@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201503242156069_userid to string.Designer.cs">
       <DependentUpon>201503242156069_userid to string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503251828516_add quiz questions.cs" />
+    <Compile Include="Migrations\201503251828516_add quiz questions.Designer.cs">
+      <DependentUpon>201503251828516_add quiz questions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Data\Dislikes.cs" />
@@ -1125,6 +1129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503242156069_userid to string.resx">
       <DependentUpon>201503242156069_userid to string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503251828516_add quiz questions.resx">
+      <DependentUpon>201503251828516_add quiz questions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

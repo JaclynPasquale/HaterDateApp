@@ -5,24 +5,24 @@
   
         <div class="form-group">
             <label class="col-sm-2 control-label" for="username">User Name</label>
-            <input ng-model="newProfile.ApplicationUserId" class="col-sm-2" type="text" />
+            <input ng-model="newProfile.ApplicationUserId" class="col-sm-2 form-control" type="text" />
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="firstname">First Name</label>
-            <input ng-model="newProfile.FirstName" class="col-sm-2" type="text" />
+            <input ng-model="newProfile.FirstName" class="col-sm-2 form-control" type="text" />
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="lastname">Last Name</label>
-            <input ng-model="newProfile.LastName" class="col-sm-2" type="text" />
+            <input ng-model="newProfile.LastName" class="col-sm-2 form-control" type="text" />
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label" for="city">City</label>
-            <input ng-model="newProfile.City" class="col-sm-2" type="text" />
+            <input ng-model="newProfile.City" class="col-sm-2 form-control" type="text" />
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="state">State</label>
-            <select ng-model="newProfile.State" class="col-sm-2">
+            <select ng-model="newProfile.State" class="col-sm-2 form-control">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -78,11 +78,11 @@
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="email">Email</label>
-            <input ng-model="newProfile.Email" class="col-sm-2" type="email" />
+            <input ng-model="newProfile.Email" class="col-sm-2 form-control" type="email" />
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="age">Age</label>
-            <input ng-model="newProfile.Age" class="col-sm-2" type="text" />
+            <input ng-model="newProfile.Age" class="col-sm-2 form-control" type="text" />
         </div>
         
         <div class="form-group">
@@ -94,18 +94,18 @@
         </div>
         <div class="form-group" >
             <label class="col-sm-2 control-label" for="interestedin">Interested in</label>
-            <input ng-model="newProfile.PreferredGender" id="men" class="radio-inline radio" type="radio" name="interestedin" value="M" />
+            <input ng-model="newProfile.PreferredGender" id="men" class="radio-inline radio " type="radio" name="interestedin" value="M" />
             <label id="men" for="men">Men</label>
-            <input ng-model="newProfile.PreferredGender" id="women" class="radio-inline radio" type="radio" name="interestedin" value="F" />
+            <input ng-model="newProfile.PreferredGender" id="women" class="radio-inline radio " type="radio" name="interestedin" value="F" />
             <label id="women" for="women">Women</label>
         </div>
         <div class="form-group">
             <label  class="col-sm-2 control-label" for="imgurl">Image URL</label>
-            <input ng-model="newProfile.PictureURL" class="col-sm-2" type="url" />
+            <input ng-model="newProfile.PictureURL" class="col-sm-2 form-control" type="url" />
         </div>
         <div class="form-group">
              <label class="col-sm-2 control-label" for="aboutme">About Me</label>
-             <input ng-model="newProfile.AboutBlurb" class="col-sm-2" type="text" />
+             <textarea ng-model="newProfile.AboutBlurb" class="col-sm-2 form-control" type="text" />
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

@@ -59,7 +59,7 @@ namespace HaterDateApp.Controllers
         [HttpPost]
         public HttpResponseMessage Post(Dislikes dislike)
         {
-            dislike.ProfileId = User.Identity.GetUserName();
+            dislike.ProfileId = User.Identity.GetUserId();
             _repo.AddDislike(dislike);
             return Request.CreateResponse(HttpStatusCode.Created, dislike);
         }
@@ -68,11 +68,14 @@ namespace HaterDateApp.Controllers
         public IEnumerable<Questions> GetQuestions()
         {
             return _repo.GetQuestions()
-                
-                .ToList();
-               
-                    
+                .ToList();         
         }
+        //[Route("api/questions")]
+        //public IEnumerable<Dislikes> GetDislikes()
+        //{
+        //    return _repo.GetDislikes()
+        //        .ToList();
+        //}
        
         // PUT: api/Profile/5
         public void Put(int id, [FromBody]string value)

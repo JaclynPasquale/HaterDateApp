@@ -48,7 +48,6 @@ textarea {
 
 .ac-custom {
 	padding: 0 3em;
-	
 	margin: 0 auto;
 }
 
@@ -85,7 +84,7 @@ textarea {
 	transition: color 0.3s;
 }
 
-.ac-custom input[type="checkbox"],
+/*.ac-custom input[type="checkbox"]*/
 .ac-custom input[type="radio"],
 .ac-custom label::before {
 	width: 40px;

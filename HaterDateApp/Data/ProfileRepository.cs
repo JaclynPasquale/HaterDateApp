@@ -24,6 +24,8 @@ namespace HaterDateApp.Data
             _dbContext.Profile.Load();
             _dbContext = new HaterDateContext();
             _dbContext.Question.Load();
+            _dbContext = new HaterDateContext();
+            _dbContext.Dislike.Load();
         }
         public HaterDateContext Context()
         {
@@ -84,14 +86,41 @@ namespace HaterDateApp.Data
                              select p;
             return ProfilebyId.ToList();
         }
+        public IQueryable<Data.Profiles> GetCompatibleProfiles(Profiles match)
+        {
+            return _dbContext.Profile.Where(profile => profile.PreferredGender == match.Gender && profile.Gender == match.PreferredGender);
+        }
+
+        public Dictionary<Profiles, int> FindPotentialMatches(Profiles matchee)
+        {
+            Dictionary<Profiles, int> dictionary =
+            new Dictionary<Profiles, int>();
+
+            foreach (Profiles potentialMatch in GetCompatibleProfiles(matchee))
+            {
+                var sql = @"SELECT SUM(CASE WHEN mine.QuestionValue = theirs.QuestionValue THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS match
+  FROM [HaterDateApp.HaterDateContext].[dbo].[Dislikes] as mine
+  JOIN [HaterDateApp.HaterDateContext].[dbo].[Dislikes] as theirs
+  on mine.QuestionId = theirs.QuestionId
+  WHERE mine.ProfileId = '{0}'
+  AND theirs.ProfileId = '{1}'";
+              int MatchPercentage = _dbContext.Database.ExecuteSqlCommand(sql, matchee.Id, potentialMatch.Id);
+                
+            }
+
+            
+             return dictionary ; 
+        }
+       
 
         public IQueryable<Data.Profiles> GetProfiles()
         {
-            // First look to see if the stash is populated. If so
-            // then return that stash otherwise do what's below.
-            //var qu = from Profiles in _dbContext.Profiles select Profiles;
-            //return qu.ToList<Model.Profile>();
             return _dbContext.Profile;
+        }
+
+        public IQueryable<Data.Dislikes> GetDislikes()
+        {
+            return _dbContext.Dislike;
         }
 
         public IQueryable<Profiles> GetProfileByState(string state)
