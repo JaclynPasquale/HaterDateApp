@@ -71,19 +71,16 @@ namespace HaterDateApp.Migrations
                 },
                 new Questions
                 {
-                    QuestionName = "Djs on the radio"
+                    QuestionName = "Radio djs"
                 },
                 new Questions
                 {
                     QuestionName = "Cats"
                 },
+                
                 new Questions
                 {
-                    QuestionName = "Tailgating"
-                },
-                new Questions
-                {
-                    QuestionName = "The Police"
+                    QuestionName = "The police"
                 },
                 new Questions
                 {
@@ -99,7 +96,7 @@ namespace HaterDateApp.Migrations
                 },
                 new Questions
                 {
-                    QuestionName = "Cryptic Facebook status'"
+                    QuestionName = "Cryptic Facebook statuses"
                 },
                 new Questions
                 {
@@ -107,7 +104,7 @@ namespace HaterDateApp.Migrations
                 },
                 new Questions
                 {
-                    QuestionName = "Biking"
+                    QuestionName = "Bicycling"
                 },
                 
                 new Questions
@@ -120,6 +117,10 @@ namespace HaterDateApp.Migrations
                 },
                 new Questions
                 {
+                    QuestionName = "Yoga"
+                },
+                new Questions
+                {
                     QuestionName = "The tv show \"Friends\""
                 },
                  new Questions
@@ -128,8 +129,77 @@ namespace HaterDateApp.Migrations
                 },
                 new Questions
                 {
-                    QuestionName = "People that bring their desktop computer to a coffee shop"
+                    QuestionName = "People that bring their desktop computers to a coffee shop"
+                },
+                new Questions
+                {
+                    QuestionName = "Vegans"
+                },
+                new Questions
+                {
+                    QuestionName = "Skirillex"
+                },
+                new Questions
+                {
+                    QuestionName = "Dave Matthews Band"
+                },
+                new Questions
+                {
+                    QuestionName = "Patcholi oil"
+                },
+                new Questions
+                {
+                    QuestionName = "Jam bands"
+                },
+                new Questions
+                {
+                    QuestionName = "Video games"
+                },
+                new Questions
+                {
+                    QuestionName = "People that have a strong opinion on the pronouncation of \"gyro\""
+                },
+                new Questions
+                {
+                    QuestionName = "Sweet Tea"
+                },
+                new Questions
+                {
+                    QuestionName = "Fast Food"
+                },
+                new Questions
+                {
+                    QuestionName = "Crossfit"
+                },
+                new Questions
+                {
+                    QuestionName = "Trucks"
+                },
+                new Questions
+                {
+                    QuestionName = "Rom coms"
+                },
+                new Questions
+                {
+                    QuestionName = "using the wrong form of \"your/your're\""
+                },
+                new Questions
+                {
+                    QuestionName = "Men's sandals (mandles)"
+                },
+                new Questions
+                {
+                    QuestionName = "Pronouncing the \"h\" in why and wheat"
+                },
+                new Questions
+                {
+                    QuestionName = "People who think dairy is paleo"
+                },
+                new Questions
+                {
+                    QuestionName = "Traveling by plane"
                 }
+
              );
         }
 

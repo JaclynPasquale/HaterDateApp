@@ -30,10 +30,10 @@ app.controller('questionCtrl', function($scope, profileFactory, $location, $rout
     }
 })
 
-//app.controller('MatchCtrl', function ($scope, $location, profileFactory) {
-//    $scope.dislike = profileFactory.get();
-//    $scope.matches = {};
+app.controller('matchCtrl', function ($scope, $location, profileFactory) {
+    $scope.matches = profileFactory.getMatches();
+  
 
 
     
-//})
+})

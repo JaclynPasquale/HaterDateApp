@@ -19,11 +19,10 @@ namespace HaterDateApp.Controllers
         public IEnumerable<Profiles> Get()
         {
             string userId = User.Identity.GetUserId();
-            if (userId != null)
-            {
-                return _repo.GetProfilebyUserId(userId);
-            }
-            return _repo.GetProfiles();
+            
+            return _repo.GetProfilebyUserId(userId);
+            
+           
         }
 
         [Route("api/Profile/{id}")]
@@ -64,18 +63,21 @@ namespace HaterDateApp.Controllers
             return Request.CreateResponse(HttpStatusCode.Created, dislike);
         }
 
+        [Authorize]
         [Route("api/questions")]
         public IEnumerable<Questions> GetQuestions()
         {
             return _repo.GetQuestions()
                 .ToList();         
         }
-        //[Route("api/questions")]
-        //public IEnumerable<Dislikes> GetDislikes()
-        //{
-        //    return _repo.GetDislikes()
-        //        .ToList();
-        //}
+        //[Authorize]
+        [Route("api/matches")]
+        public IEnumerable<Profiles> GetMatches()
+        {
+            Profiles profile = _repo.GetProfilebyUserId(User.Identity.GetUserId()).First();
+            return _repo.FindPotentialMatches(profile);
+
+        }
        
         // PUT: api/Profile/5
         public void Put(int id, [FromBody]string value)

@@ -78,25 +78,34 @@ namespace HaterDateApp.Data
             _dbContext.Profile.RemoveRange(a);
             _dbContext.SaveChanges();
         }
-
         public IEnumerable<Profiles> GetProfilebyUserId(string userId)
         {
             var ProfilebyId = from p in _dbContext.Profile
-                             where p.ApplicationUserId == userId
-                             select p;
+                              where p.ApplicationUserId == userId
+                              select p;
             return ProfilebyId.ToList();
         }
+
+        //public Profiles GetProfilebyUserId(string userId)
+        //{
+        //    var ProfilebyId = from p in _dbContext.Profile
+        //                     where p.ApplicationUserId == userId
+        //                     select p;
+        //    return ProfilebyId.ToList().First();
+        //}
         public IQueryable<Data.Profiles> GetCompatibleProfiles(Profiles match)
         {
             return _dbContext.Profile.Where(profile => profile.PreferredGender == match.Gender && profile.Gender == match.PreferredGender);
         }
 
-        public Dictionary<Profiles, int> FindPotentialMatches(Profiles matchee)
+        public IEnumerable<Profiles> FindPotentialMatches(Profiles matchee)
         {
-            Dictionary<Profiles, int> dictionary =
-            new Dictionary<Profiles, int>();
+            SortedDictionary<int, List<Profiles>> dictionary =
+            new SortedDictionary<int, List<Profiles>>();
 
-            foreach (Profiles potentialMatch in GetCompatibleProfiles(matchee))
+            IList<Profiles> compatibleProfiles = GetCompatibleProfiles(matchee).ToList();
+
+            foreach (Profiles potentialMatch in compatibleProfiles)
             {
                 var sql = @"SELECT SUM(CASE WHEN mine.QuestionValue = theirs.QuestionValue THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS match
   FROM [HaterDateApp.HaterDateContext].[dbo].[Dislikes] as mine
@@ -104,12 +113,20 @@ namespace HaterDateApp.Data
   on mine.QuestionId = theirs.QuestionId
   WHERE mine.ProfileId = '{0}'
   AND theirs.ProfileId = '{1}'";
-              int MatchPercentage = _dbContext.Database.ExecuteSqlCommand(sql, matchee.Id, potentialMatch.Id);
-                
+                int MatchPercentage = _dbContext.Database.ExecuteSqlCommand(sql, matchee.Id, potentialMatch.Id);
+
+              List<Profiles> list;
+
+              if (!dictionary.TryGetValue(MatchPercentage, out list))
+              {
+                  list = new List<Profiles>();
+                  dictionary.Add(MatchPercentage, list);
+              }
+
+              list.Add(potentialMatch);
             }
 
-            
-             return dictionary ; 
+            return dictionary.Values.SelectMany(x => x).ToList(); 
         }
        
 

@@ -337,6 +337,10 @@ section.related {
 
 }
 
+.landing {
+    background-image: url()
+}
+
 svg {
     fill: royalblue;
 }

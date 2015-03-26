@@ -18,7 +18,7 @@ app.config(function ($routeProvider) {
             controller: "questionCtrl",
             templateUrl: "/AngularApp/StaticViews/Quiz1.html"
         })
-        .when("/Match", {
+        .when("/Matches", {
             controller: "matchCtrl",
             templateUrl: "/AngularApp/StaticViews/Matches.html"
         })

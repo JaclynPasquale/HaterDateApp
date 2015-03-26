@@ -3,7 +3,9 @@
         get: function () {
             return $resource('/api/profile').query();
         },
-
+        getMatches: function () {
+            return $resource('/api/matches').query();
+        },
         getQuestions: function () {
             return $resource('/api/questions').query();
         },
