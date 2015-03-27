@@ -53,13 +53,21 @@ namespace HaterDateApp.Data
         }
         public void AddDislike(Data.Dislikes dislike)
         {
-            _dbContext.Dislike.Add(dislike);
-            _dbContext.SaveChanges();
+            try
+            {
+                _dbContext.Dislike.Add(dislike);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                
+            }
         }
 
         public void Add(Data.Profiles profile)
         {
-            
+
             _dbContext.Profile.Add(profile);
             _dbContext.SaveChanges();
         }
@@ -86,13 +94,7 @@ namespace HaterDateApp.Data
             return ProfilebyId.ToList();
         }
 
-        //public Profiles GetProfilebyUserId(string userId)
-        //{
-        //    var ProfilebyId = from p in _dbContext.Profile
-        //                     where p.ApplicationUserId == userId
-        //                     select p;
-        //    return ProfilebyId.ToList().First();
-        //}
+        
         public IQueryable<Data.Profiles> GetCompatibleProfiles(Profiles match)
         {
             return _dbContext.Profile.Where(profile => profile.PreferredGender == match.Gender && profile.Gender == match.PreferredGender);
@@ -115,20 +117,20 @@ namespace HaterDateApp.Data
   AND theirs.ProfileId = '{1}'";
                 int MatchPercentage = _dbContext.Database.ExecuteSqlCommand(sql, matchee.Id, potentialMatch.Id);
 
-              List<Profiles> list;
+                List<Profiles> list;
 
-              if (!dictionary.TryGetValue(MatchPercentage, out list))
-              {
-                  list = new List<Profiles>();
-                  dictionary.Add(MatchPercentage, list);
-              }
+                if (!dictionary.TryGetValue(MatchPercentage, out list))
+                {
+                    list = new List<Profiles>();
+                    dictionary.Add(MatchPercentage, list);
+                }
 
-              list.Add(potentialMatch);
+                list.Add(potentialMatch);
             }
 
-            return dictionary.Values.SelectMany(x => x).ToList(); 
+            return dictionary.Values.SelectMany(x => x).ToList();
         }
-       
+
 
         public IQueryable<Data.Profiles> GetProfiles()
         {
@@ -143,11 +145,11 @@ namespace HaterDateApp.Data
         public IQueryable<Profiles> GetProfileByState(string state)
         {
             var profile = from a in _dbContext.Profile
-                         select a;
-            
+                          select a;
+
             profile = profile.Where(s => s.State.Contains(state));
 
-           return profile;
+            return profile;
         }
 
         public IQueryable<Data.Profiles> SearchFor(System.Linq.Expressions.Expression<Func<Data.Profiles, bool>> predicate)

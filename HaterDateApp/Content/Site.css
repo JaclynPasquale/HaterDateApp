@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #881745;
+    background-color: #E9E3CD;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -29,6 +29,78 @@ textarea {
 #men,
 #women {
     margin-right:15px;
+    margin-left: 10px;
+}
+
+.hearts img {
+    width: 730px;
+    background-color: #881745;
+}
+.hearts{
+    background-color: #881745;
+    height: 800px;
+    padding: 0px;
+}
+
+#landing {
+    background-color: #881745;
+    position:fixed;
+    margin: 0 auto;
+    text-align: center;
+}
+.tagline {
+    color: white;
+    font-size: 45px;
+    font-family: "Fugaz One", Helvetica, Arial, sans-serif;
+    margin: 50px 0 0 0;
+    margin: 50px;
+}
+.sub-tagline {
+    color: white;
+    font-size: 30px;
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    margin:30px;
+}
+.title, .title a {
+    color: white;
+    font-size: 20px;
+    font-family: "Fugaz One", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+
+}
+
+.page-title{
+    color: #881745;
+    font-size: 40px;
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    margin:40px;
+}
+
+.red-color {
+ background-color: #CF4542;
+ padding: 40px;
+
+}
+
+.profileform {
+  margin: 30px;
+}
+
+div input {
+    background-color: #EAE4CE;
+}
+label {
+    color: white;
+}
+
+input.form-control{
+     background-color: #EAE4CE;
+}
+textarea.form-control{
+     background-color: #EAE4CE;
+}
+select.form-control{
+     background-color: #EAE4CE;
 }
 
 
