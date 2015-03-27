@@ -1,6 +1,25 @@
 ﻿<section>
     <div ng-repeat="match in matches">
-        <h2>{{match .firstName }}</h2>
+        <img src="{{match.pictureURL}}" />
+        <ul>
+            <li>
+                <h2>{{match.firstName }}</h2>
+            </li>
+            <li>
+                <h4>{{match.city}}</h4>
+            </li>
+            <li>
+                <h4>{{match.state}}</h4>
+            </li>
+            <li>
+                <h5>{{match.age}}</h5>
+            </li>
+            <li>
+                <p>{{match.aboutBlurb}}</p>
+            </li>
+
+        </ul>
+        
     </div>
 </section>
 

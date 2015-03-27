@@ -48,9 +48,9 @@ a:hover, a:focus {
 	padding: 0 0 0.6em 0.1em;
 }
 
-section {
+/*section {
 	padding: 7em 0;
-}
+}*/
 
 section:nth-child(even) {
 	background: rgba(0,0,0,.05);
