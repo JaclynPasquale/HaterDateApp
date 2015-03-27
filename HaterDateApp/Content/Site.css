@@ -71,15 +71,27 @@ textarea {
 
 .page-title{
     color: #881745;
+    font-size: 50px;
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    margin:30px;
+}
+
+.white-page-title{
+    color: white;
     font-size: 40px;
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-    margin:40px;
+    margin:30px;
+    text-align: center;
 }
 
 .red-color {
  background-color: #CF4542;
  padding: 40px;
 
+}
+
+section.quiz {
+    margin-left: 300px;
 }
 
 .profileform {
@@ -101,6 +113,38 @@ textarea.form-control{
 }
 select.form-control{
      background-color: #EAE4CE;
+}
+.question {
+     color: white;
+    font-size: 40px;
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+}
+.border-left {
+  border-radius: 8px 0 0 8px;
+}
+.border-right {
+  border-radius: 0 8px 8px 0;
+}
+
+.card {
+    background-color: #881745;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px ;
+
+
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.question-label{
+
+}
+
+.btn {
+    margin: 20px;
 }
 
 

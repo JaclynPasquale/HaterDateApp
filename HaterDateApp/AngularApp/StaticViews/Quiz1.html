@@ -1,24 +1,52 @@
-﻿<section>
+﻿<!--<div >
     <form class="ac-custom ac-radio ac-fill quizform" autocomplete="off">
-        <h1>Do you Hate these things?</h1>
+        <h1 class="text-center white-page-title">Do you Hate these things?</h1>
         <div class="col-lg-12 ">
             <ul>
-                <li >
-                    <h2 class="text-center">{{questions[q].questionName}}</h2>
+                <li>
+                    <h2 class="text-center ">{{questions[q].questionName}}</h2>
                 </li>
-                   <li class="">
-                       <input ng-change="saveDislike(dislike)" name="name" value="T" type="radio" ng-model="Dislike.QuestionValue">
+                <li class="text-center">
+                    <input ng-change="saveDislike(dislike)" name="name" value="T" type="radio" ng-model="Dislike.QuestionValue">
                     <label for="r1">Yes</label>
+                </li>
+                <li class="text-center">
+                    <input ng-change="saveDislike(dislike)" ng-model="Dislike.QuestionValue" value="F" name="name" type="radio">
+                    <label for="r2">No</label>
+                </li>
+                
+            </ul>
+            <div class="btn btn-info col-lg-3 " ng-click="nextQuestion()">NEXT QUESTION</div>
+            
+        </div>
+    </form>
+</div>-->
+
+<section class="card col-lg-6 quiz">
+    <form class="ac-custom ac-radio ac-fill quizform" autocomplete="off">
+        <h1 class="white-page-title">Do you Hate these things?</h1>
+        <div class="">
+            <ul>
+                <li>
+                    <h2 class="text-center question">{{questions[q].questionName}}</h2>
+                </li>
+                <li class="">
+                    <input ng-change="saveDislike(dislike)" name="name" value="T" type="radio" ng-model="Dislike.QuestionValue">
+                    <label for="r1" class="question-label">Yes</label>
                 </li>
                 <li>
                     <input ng-change="saveDislike(dislike)" ng-model="Dislike.QuestionValue" value="F" name="name" type="radio">
                     <label for="r2">No</label>
                 </li>
             </ul>
-            <div class="btn btn-success" ng-click="nextQuestion()">Next Question</div>
+            <div class="text-center" >
+            <div class="btn btn-info" ng-click="nextQuestion()">NEXT QUESTION</div>
+            <div class="btn btn-danger" ng-click="">SEE MATCHES</div>
+            </div>
+            
         </div>
-       
-</form>
+
+    </form>
 </section>
 
 
