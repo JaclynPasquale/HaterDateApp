@@ -143,8 +143,45 @@ select.form-control{
 
 }
 
-.btn {
-    margin: 20px;
+.quiz-btn {
+    margin: 40px 20px;
+}
+
+.profile-img {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    
+}
+
+
+
+.match-card {
+    background-color: #488985;
+    /*08AAC1;*/
+    border-radius: 8px;
+    padding: 30px;
+    margin: 40px ;
+    color: white;
+}
+
+.match-list {
+    list-style: none;
+    color:white;
+    
+
+}
+.name {
+    color: #F8A428
+
+}
+
+.center {
+    margin: auto 0;
+}
+
+.tagline {
+    margin-right:150px;
 }
 
 

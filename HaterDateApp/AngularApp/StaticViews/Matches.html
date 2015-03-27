@@ -1,25 +1,27 @@
-﻿<section class="row">
-    <div class="card" ng-repeat="match in matches">
-        <img src="{{match.pictureURL}}" />
-        <ul>
+﻿<section class="">
+  
+        
+            
+        <ul class="match-list match-card  col-lg-5 col-lg-offset-2" ng-repeat="match in matches">
+
             <li>
-                <h2>{{match.firstName }}</h2>
+                <img class="profile-img" src="{{match.pictureURL}}" />
             </li>
             <li>
-                <h4>{{match.city}}</h4>
+                <h1>{{match.firstName }}</h1>
+                <h4>Age: {{match.age}}</h4>
             </li>
             <li>
-                <h4>{{match.state}}</h4>
+                <h3>{{match.city}}, {{match.state}}</h3>
             </li>
+          
+            
             <li>
-                <h5>{{match.age}}</h5>
-            </li>
-            <li>
-                <p>{{match.aboutBlurb}}</p>
+                <p>About me:{{match.aboutBlurb}}</p>
             </li>
 
         </ul>
-        
-    </div>
+
+     
 </section>
 

@@ -22,15 +22,17 @@
     </form>
 </div>-->
 
+
 <section class="card col-lg-6 quiz">
+    <h1 class="white-page-title">Do you Hate these things?</h1>
     <form class="ac-custom ac-radio ac-fill quizform" autocomplete="off">
-        <h1 class="white-page-title">Do you Hate these things?</h1>
+        
         <div class="">
             <ul>
                 <li>
                     <h2 class="text-center question">{{questions[q].questionName}}</h2>
                 </li>
-                <li class="">
+                <li class="margin">
                     <input ng-change="saveDislike(dislike)" name="name" value="T" type="radio" ng-model="Dislike.QuestionValue">
                     <label for="r1" class="question-label">Yes</label>
                 </li>
@@ -39,9 +41,9 @@
                     <label for="r2">No</label>
                 </li>
             </ul>
-            <div class="text-center" >
-            <div class="btn btn-info" ng-click="nextQuestion()">NEXT QUESTION</div>
-            <div class="btn btn-danger" ng-click="">SEE MATCHES</div>
+            <div class="text-center">
+            <a href="/#/Matches"><div class="btn quiz-btn btn-default">SEE MATCHES</div></a>
+            <div class="btn quiz-btn btn-info" ng-click="nextQuestion()">NEXT QUESTION</div>
             </div>
             
         </div>

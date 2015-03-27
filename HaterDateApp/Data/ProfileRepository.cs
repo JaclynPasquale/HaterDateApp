@@ -61,15 +61,22 @@ namespace HaterDateApp.Data
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                
+
             }
         }
 
         public void Add(Data.Profiles profile)
         {
+            try
+            {
+                _dbContext.Profile.Add(profile);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
 
-            _dbContext.Profile.Add(profile);
-            _dbContext.SaveChanges();
+            }
         }
 
         public Data.Profiles GetById(string id)
@@ -94,7 +101,7 @@ namespace HaterDateApp.Data
             return ProfilebyId.ToList();
         }
 
-        
+
         public IQueryable<Data.Profiles> GetCompatibleProfiles(Profiles match)
         {
             return _dbContext.Profile.Where(profile => profile.PreferredGender == match.Gender && profile.Gender == match.PreferredGender);
