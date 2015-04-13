@@ -1,9 +1,18 @@
-﻿
+﻿app.controller('landingCtrl', function ($scope, profileFactory, $location) {
+    $scope.profile = profileFactory.get();
+    console.log($scope.profile)
+    if ($scope.profile.firstName == null) {
+        $location.url('/ProfileForm');
+    }
+    else {
+        $location.url('/');
+    }
+
+});
 
 app.controller('MyprofileCtrl', function ($scope, profileFactory, $location) {
     $scope.profile = profileFactory.get();
     console.log($scope.profile);
-    //$scope.dislike = profileFactory.
     $location.url("/MyProfile");
 });
 

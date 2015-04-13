@@ -3,7 +3,7 @@
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            controller: "profileCtrl",
+            controller: "landingCtrl",
             templateUrl: "/AngularApp/StaticViews/Landing.html"
         })
         .when("/ProfileForm", {

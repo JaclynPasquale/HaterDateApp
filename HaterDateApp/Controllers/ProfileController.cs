@@ -29,10 +29,8 @@ namespace HaterDateApp.Controllers
                 List<Profiles> emptyProfiles = new List<Profiles>();
                 return emptyProfiles;
             }
-
         }
-            
-
+        
         [Route("api/profile/{id}")]
         public IEnumerable<Profiles> Get(string id)
         {
@@ -51,8 +49,7 @@ namespace HaterDateApp.Controllers
             {
                 Profiles emptyProfile = new Profiles();
                 return emptyProfile;
-            }
-             
+            }   
         }
 
         [Authorize]
