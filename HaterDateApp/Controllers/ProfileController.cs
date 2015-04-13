@@ -41,9 +41,18 @@ namespace HaterDateApp.Controllers
 
         [Route("api/myprofile")]
         public Profiles GetCurrentUserProfile()
-        {  
-           var currentId = User.Identity.GetUserId();
-           return _repo.GetProfilebyUserId(currentId).First();   
+        {
+            try
+            {
+                var currentId = User.Identity.GetUserId();
+                return _repo.GetProfilebyUserId(currentId).First(); 
+            }
+            catch
+            {
+                Profiles emptyProfile = new Profiles();
+                return emptyProfile;
+            }
+             
         }
 
         [Authorize]

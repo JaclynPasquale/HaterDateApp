@@ -1,7 +1,10 @@
 ﻿
 
-app.controller('currentprofileCtrl', function ($scope, profileFactory, $location) {
+app.controller('MyprofileCtrl', function ($scope, profileFactory, $location) {
     $scope.profile = profileFactory.get();
+    console.log($scope.profile);
+    //$scope.dislike = profileFactory.
+    $location.url("/MyProfile");
 });
 
 app.controller('profileCtrl', function ($scope, profileFactory, $location) {

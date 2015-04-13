@@ -11,7 +11,7 @@ app.config(function ($routeProvider) {
             templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
         })
         .when("/MyProfile", {
-            controller: "currentprofileCtrl",
+            controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/ShowProfile.html"
         })
         .when("/Profile/:id", {

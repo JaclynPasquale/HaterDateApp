@@ -12,6 +12,9 @@
         getQuestions: function () {
             return $resource('/api/questions').query();
         },
+        getDislike: function () {
+            return $resource('/api/dislikes').query();
+        }
 
         save: function (profile) {
             return $resource('/api/profiles').save(profile);
