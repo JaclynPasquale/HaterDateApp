@@ -1,11 +1,8 @@
-﻿<section class="">
-  
-        
-            
+﻿<section >
         <ul class="match-list match-card  col-lg-5 col-lg-offset-2" ng-repeat="match in matches">
 
             <li>
-                <img class="profile-img" src="{{match.pictureURL}}" />
+                <img class="profile-img" ng-src="{{match.pictureURL}}" />
             </li>
             <li>
                 <h1>{{match.firstName }}</h1>
@@ -21,7 +18,5 @@
             </li>
 
         </ul>
-
-     
 </section>
 

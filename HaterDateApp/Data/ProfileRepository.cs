@@ -144,6 +144,14 @@ namespace HaterDateApp.Data
             return _dbContext.Profile;
         }
 
+        //public IQueryable<Data.Dislikes> GetDislikeId()
+        //{
+        //    var QuestionId = from a in DbContext
+        //    if (QuestionId == null){
+
+        //    }
+        //}
+
         public IQueryable<Data.Dislikes> GetDislikes()
         {
             return _dbContext.Dislike;

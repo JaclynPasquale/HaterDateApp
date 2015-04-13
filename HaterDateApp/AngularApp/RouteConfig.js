@@ -6,9 +6,13 @@ app.config(function ($routeProvider) {
             controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/Landing.html"
         })
-        .when("/Profile", {
+        .when("/ProfileForm", {
             controller: "profileCtrl",
             templateUrl: "/AngularApp/StaticViews/ProfileForm.html"
+        })
+        .when("/MyProfile", {
+            controller: "currentprofileCtrl",
+            templateUrl: "/AngularApp/StaticViews/ShowProfile.html"
         })
         .when("/Profile/:id", {
             controller: "profileCtrl",

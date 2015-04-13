@@ -48,5 +48,16 @@ namespace HaterDatingAppTests
 
 
         }
+        [TestMethod]
+      public void TestGetMatches()
+      {
+          repo.GetProfilebyUserId("4b559ad9-c815-4a0c-9058-075908a4055c");
+          Assert.AreEqual(1, repo.GetCount());
+          //repo.GetCompatibleProfiles(match);
+          //Assert.AreEqual();
+          
+          
+          
+      }
     }
 }

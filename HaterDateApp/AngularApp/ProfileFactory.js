@@ -1,7 +1,10 @@
 ﻿app.factory('profileFactory', function ($resource) {
     return {
         get: function () {
-            return $resource('/api/profile').query();
+            return $resource('/api/myprofile').get();
+        },
+        getProfiles: function () {
+            return $resource('/api/profiles').query();
         },
         getMatches: function () {
             return $resource('/api/matches').query();
@@ -11,7 +14,7 @@
         },
 
         save: function (profile) {
-            return $resource('/api/profile').save(profile);
+            return $resource('/api/profiles').save(profile);
         },
 
         saveDislike: function (question) {
