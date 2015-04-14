@@ -67,10 +67,25 @@ namespace HaterDateApp.Controllers
         [HttpPost]
         public HttpResponseMessage Post(Dislikes dislike)
         {
+
             dislike.ProfileId = User.Identity.GetUserId();
-            _repo.AddDislike(dislike);
-            return Request.CreateResponse(HttpStatusCode.Created, dislike);
-        }
+            //var dislikes = _repo.GetDislikesById(User.Identity.GetUserId()).ToList<Data.Dislikes>();
+
+            var dislikes = _repo.GetDislikesById(User.Identity.GetUserId()).Where(s => s.QuestionId == dislike.QuestionId);
+
+            if (dislikes.ToList<Data.Dislikes>().Count() > 0)
+            {
+                _repo.UpdateDislike(User.Identity.GetUserId(), dislike.QuestionId, dislike.QuestionValue);
+                return Request.CreateResponse(HttpStatusCode.OK, dislike);
+            }
+            else
+            {
+                _repo.AddDislike(dislike);
+                return Request.CreateResponse(HttpStatusCode.Created, dislike);
+            }
+
+       }
+            
 
         //[Authorize]
         [Route("api/questions")]

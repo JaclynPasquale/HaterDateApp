@@ -156,7 +156,23 @@ namespace HaterDateApp.Data
         {
             return _dbContext.Dislike;
         }
+        public IQueryable<Data.Dislikes> GetDislikesById(string id)
+        {
+            var dislikes = from a in _dbContext.Dislike
+                        where a.ProfileId == id
+                        select a;
+            return dislikes;
+        }
 
+        public void UpdateDislike(string userid, int questionid, string questionvalue)
+        {
+            var dislikes = from a in _dbContext.Dislike
+                           where a.ProfileId == userid && a.QuestionId == questionid 
+                           select a;
+            dislikes.First<Data.Dislikes>().QuestionValue = questionvalue;
+            _dbContext.SaveChanges();
+        }
+ 
         public IQueryable<Profiles> GetProfileByState(string state)
         {
             var profile = from a in _dbContext.Profile

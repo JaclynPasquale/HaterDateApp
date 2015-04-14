@@ -7,7 +7,6 @@
     else {
         $location.url('/');
     }
-
 });
 
 app.controller('MyprofileCtrl', function ($scope, profileFactory, $location) {
@@ -31,7 +30,6 @@ app.controller('profileCtrl', function ($scope, profileFactory, $location) {
 });
 app.controller('questionCtrl', function($scope, profileFactory, $location, $routeParams){
     $scope.questions = profileFactory.getQuestions();
-    //$scope.newQuestion = {};
     $scope.save = function () {
         profileFactory.saveDislike($scope.newQuestion);
         $location.url("/Matches")
